@@ -2,11 +2,6 @@
 
 This is a web-based Tic-Tac-Toe game built using HTML, CSS, and JavaScript. The game supports two-player mode and displays the winner with a popup interface.
 
-## Live Demo
-
-You can view the live project here: [GitHub Pages Link](#)  
-*(Replace this with your actual deployed URL)*
-
 ## Project Structure
 
 
