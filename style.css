@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #FDFFAE; 
+    text-align: center;
+    font-family: "Comic Relief", system-ui;
+}
+
+
+#heading{
+    font-size: 3rem;
+    font-family: "Tagesschrift",sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    margin-top: 1.5rem;
+    color: #FF5F5F;
+}
+
+.container{
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3 ) ;
+    font-size: 10vmin;
+    font-family: "Lilita One", sans-serif;
+    color: #F11A7B;
+    background-color: #C3EDC0;
+    transition: transform 0.2s ease ;
+}
+
+.box:hover{
+    transform: scale(1.04);
+}
+
+@media screen and (max-width:650px) {
+    .container{
+        align-items: center;
+    }
+    
+    .game{
+        margin: 0 20px;
+        height: 20rem;
+        width: 50vmax;
+        gap: 2.5vmin;
+    }
+
+    .box{
+        height: 30%;
+        width: 30%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3 ) ;
+        font-size: 15vmin;
+    }
+}
+
+.reset{
+    height: 2.5rem;
+    width: 9rem;
+    border-radius: 10px;
+    background: #A076F9;
+    border: 2px solid #071952;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #071952;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.reset:hover{
+    font-size: 1.2rem;
+}
+
+
+#new-btn{
+    height: 2.7rem;
+    width: 9rem;
+    padding: 1vmin 2vmin;
+    margin-top: 10px;
+    border-radius: 0.7rem;
+    background: linear-gradient(45deg, #D7BBF5, #A076F9, #6528F7 );
+    border: 2px solid #071952;
+    font-size: 1.18rem;
+    font-weight: 900;
+    color: #071952;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#new-btn:hover{
+    font-size: 1.254rem;
+}
+
+@media screen and (max-width:650px){
+    #new-btn{
+        margin: 5px;
+        height: 2rem;
+        width: 7rem;
+        font-size: 0.9rem;
+    }
+
+    #new-btn:hover{
+        font-size: 1rem;
+    }
+}
+
+
+/* Turn indicator */
+
+.turn-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+  
+.turn-box {
+    padding: 1px 15px;
+    border: 1.5px solid #000;
+    font-size: 24px;
+    font-weight: 900;
+    color: #F11A7B;
+    background-color: #FDFFAE;
+    transition: background-color 0.3s ease;
+}
+
+#turn-o{
+    border-right: none;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+#turn-x{
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+  
+.turn-box.active {
+    background-color: #C3EDC0;
+}
+
+
+
+/* Winner Msg */  
+
+
+.msg-container{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF5F5F;
+    border: 12px solid #FF5F5F;
+    border-radius: 15px;
+    height: 40vmin;
+    width: 75vmin;
+
+}
+
+.inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2;
+    background-color: #FDFFAE;
+    color: #FF5F5F;
+    font-weight: 900;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#congrats{
+    font-size: 4.2vmin;
+}
+
+#msg{
+    font-size: 3.8vmin;
+    margin-bottom: 15px;
+}
+
+.hide{
+    display: none;
+}  
+
+@media screen and (max-width:650px){
+    #congrats{
+        font-size: 5vmin;
+    }
+    #msg{
+        font-size: 4.5vmin;
+        margin-bottom: 8px;
+    }
+    .msg-container{
+        border: 6 solid #FF5F5F;
+    }
+    
+}
